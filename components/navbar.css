@@ -21,13 +21,16 @@
 }
 
 .nav-right {
-  width: 24px;
+  align-items: center;
   height: 24px;
   justify-self: end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .nav-right img {
-  width: 100%;
+  width: 24px;
   height: 100%;
   display: block;
   object-fit: contain;
@@ -42,4 +45,16 @@
 
 .nav-left a:hover {
   opacity: 0.6;
+}
+
+.nav-right a {
+  text-decoration: none;
+}
+
+#icone_et_nombre_panier {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-content: center;
+  align-items: center;
 }

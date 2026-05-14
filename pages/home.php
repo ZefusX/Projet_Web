@@ -1,3 +1,6 @@
+<?php
+    include "../config/init.php"
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

@@ -1,3 +1,6 @@
+<?php
+    include "../config/init.php"
+?>
 <link rel="stylesheet" href="../components/card.css">
 <link rel="stylesheet" href="shop.css">
 
