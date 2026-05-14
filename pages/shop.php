@@ -3,29 +3,19 @@
 
 <?php
 require_once __DIR__ . "/../components/card.php";
-// Ici c'est codé en brut mais on récupérera ça depuis la BDD après
-$products = [
-    [
-        "title" => "Chaise gaming",
-        "slug" => "chaise-gaming",
-        "description" => "Ultra confortable pour les longues sessions.",
-        "image" => "../assets/chair.jpg"
-    ],
-    [
-        "title" => "Clavier mécanique",
-        "slug" => "clavier-mecanique",
-        "description" => "Switchs rouges, très réactif.",
-        "image" => "/assets/keyboard.jpg"
-    ],
-    [
-        "title" => "Souris RGB",
-        "slug" => "souris-rgb",
-        "description" => "Légère et précise.",
-        "image" => "/assets/mouse.jpg"
-    ]
-];
-?>
 
+require_once __DIR__ . "/../config/db.php"; // Obliger pour se connecter à la bdd
+$sql = "SELECT * FROM products";
+$resultat = qdb($sql);
+
+$products = [];
+
+while ($row = mysqli_fetch_assoc($resultat)) {
+    $products[] = $row;
+}
+
+?>
+<?php include __DIR__ . "/../components/navbar.php"; ?>
 
 <div class="shop-grid">
 <?php

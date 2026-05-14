@@ -1,0 +1,1 @@
+Faut aller sur PHPMyAdmin et faire "importer" en sélectionnant la db (products.sql) qui est dans le dossier
