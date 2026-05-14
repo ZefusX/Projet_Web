@@ -13,7 +13,6 @@ $products = [];
 while ($row = mysqli_fetch_assoc($resultat)) {
     $products[] = $row;
 }
-
 ?>
 <?php include __DIR__ . "/../components/navbar.php"; ?>
 
