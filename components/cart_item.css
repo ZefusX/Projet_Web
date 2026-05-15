@@ -1,0 +1,35 @@
+.cart-item {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 2px;
+  margin: 16px auto;
+  background: #efead8;
+  border-radius: 12px;
+}
+
+.cart-item-image img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.cart-item-content {
+  gap: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cart-item-content h2 {
+  color: #26140c;
+  margin-bottom: 8px;
+}
+
+.cart-item-content p {
+  color: #381d12;
+  font-size: 14px;
+  max-width: 600px;
+}

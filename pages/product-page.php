@@ -5,6 +5,7 @@
 
 <?php
     require_once __DIR__ . "/../config/db.php"; // Obliger pour se connecter à la bdd
+    require_once "../api/add_to_cart.php"; // Pour gérer le panier
 
     // Récupère le slug de l'url
     $slug = $_GET["slug"];
@@ -18,16 +19,10 @@
     $image = $product["image"];
     $prix = $product["price"];
 
-    function add_to_cart($product_slug) {
-        if (!isset($_SESSION["cart"][$product_slug])) {
-            $_SESSION["cart"][$product_slug] = 1;
-        } else {
-            $_SESSION["cart"][$product_slug]++;
-        }
-    }
+
     
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        add_to_cart($slug);
+        add_to_cart($slug, $_POST['qty']);
     }
 ?>
 <?php include __DIR__ . "/../components/navbar.php"; ?>
@@ -43,10 +38,14 @@
             <button class="buy-button" onclick="">
                 Acheter maintenant <span id="price"><?= $prix ?>€</span>
             </button>
-            <form method="post">
+            <form class="add-to-cart" method="post">
                 <button type="submit" class="basket-button">
                     Ajouter au panier
                 </button>
+                <div>
+                    <label for="qty">Quantité : </label>
+                    <input id="qty" name="qty" type="number" value="1" min="1" placeholder="Quantité"/>
+                </div>
             </form>
         </div>
     </div>
