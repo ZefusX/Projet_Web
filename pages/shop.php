@@ -26,3 +26,9 @@ foreach ($products as $product) {
 }
 ?>
 </div>
+
+<div class="add-beer-button">
+    <a href="add_beer.php">
+        <button>Ajouter une bière au catalogue</button>
+    </a>
+</div>
