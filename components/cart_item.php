@@ -15,5 +15,6 @@ function Cart_item($title, $price, $image, $slug, $quantity) {
         <p>Prix : <?= $price*$quantity ?>€</p>
         <p>Quantité : <?= $quantity ?></p>
     </div>
+
 </div>
 <?php } ?>

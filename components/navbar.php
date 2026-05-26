@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../components/navbar.css">
 
 <?php
+    // Logique pour intégrer le panier dans la barre de navigation
     $cart_items = $_SESSION["cart"];
     $total = 0;
 
@@ -13,7 +14,6 @@
     <div class="nav-left">
         <a href="../pages/home.php">Accueil</a>
         <a href="../pages/shop.php">Boutique</a>
-        <a href="../pages/contact.php">Contact</a>
     </div>
     <div class="nav-logo">
         AGLOUGLOU
@@ -23,7 +23,7 @@
             <p><?= $total ?></p>
             <img src="../assets/icone_panier.svg" alt="Panier" />
         </a>
-        <a href="">
+        <a href="../pages/login.php">
             <img src="../assets/icone_utilisateur.svg" alt="Se connecter" />
         </a>
     </div>

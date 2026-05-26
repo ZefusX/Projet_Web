@@ -35,9 +35,7 @@
         <h1><?= $titre ?></h1>
         <p><?= $description ?></p>
         <div class="buttons-wrap">
-            <button class="buy-button" onclick="">
-                Acheter maintenant <span id="price"><?= $prix ?>€</span>
-            </button>
+  
             <form class="add-to-cart" method="post">
                 <button type="submit" class="basket-button">
                     Ajouter au panier
@@ -52,3 +50,4 @@
 
 
 </div>
+<script src="product-page.js"></script>

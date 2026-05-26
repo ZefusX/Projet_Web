@@ -19,16 +19,20 @@ while ($row = mysqli_fetch_assoc($resultat)) {
 ?>
 <?php include __DIR__ . "/../components/navbar.php"; ?>
 
-<div class="shop-grid">
-<?php
-foreach ($products as $product) {
-    Card($product["title"], $product["description"], $product["image"], $product["slug"]);
-}
-?>
+<div class="shop-page">
+    <div class="shop-grid">
+    <?php
+    foreach ($products as $product) {
+        Card($product["title"], $product["description"], $product["image"], $product["slug"]);
+    }
+    ?>
+    </div>
+
+    <div class="add-beer-button">
+        <a href="add_beer.php">
+            <button>Ajouter une bière au catalogue</button>
+        </a>
+    </div>
 </div>
 
-<div class="add-beer-button">
-    <a href="add_beer.php">
-        <button>Ajouter une bière au catalogue</button>
-    </a>
-</div>
+<script src="shop.js"></script>

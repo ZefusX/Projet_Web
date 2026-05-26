@@ -1,3 +1,7 @@
+html {
+  background-color: #f9f7ee;
+}
+
 h1 {
   font-size: 3.5rem;
   margin-bottom: 24px;
@@ -12,4 +16,43 @@ h1 {
   gap: 20px;
   justify-content: center;
   text-align: center;
+}
+
+.clear-cart {
+  width: 100%;
+  padding: 12px;
+  color: #26140c;
+  background-color: #f9f7ee;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.clear-cart:hover {
+  cursor: pointer;
+  background-color: #d8d4c4;
+}
+.buy-button {
+  padding: 12px;
+  color: #f9f7ee;
+  background-color: #26140c;
+  border: 2px solid #26140c;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.buy-button:hover {
+  cursor: pointer;
+  background-color: #4f2919;
+}
+
+.buttons-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

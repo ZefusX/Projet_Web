@@ -34,20 +34,7 @@ html {
   color: #26140c;
 }
 
-.buy-button {
-  padding: 12px;
-  color: #f9f7ee;
-  background-color: #26140c;
-  border: 2px solid #26140c;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  transition: background-color 200ms ease-in-out;
-}
 
-.buy-button:hover {
-  cursor: pointer;
-  background-color: #4f2919;
-}
 
 .buttons-wrap {
   display: flex;

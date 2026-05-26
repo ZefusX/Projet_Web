@@ -8,12 +8,14 @@
 
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        // Une fois le formulaire envoyé on sauvegarde les données
         $title = $_POST["title"];
         $slug = $_POST["slug"];
         $description = $_POST["description"];
         $image = $_POST["image"];
         $price = $_POST["price"];
 
+        // Qu'on insere dans la BDD
         $sql = "INSERT INTO products (title, slug, description, image, price)
         VALUES ('$title', '$slug', '$description', '$image', $price)";
         $resultat = qdb($sql);
